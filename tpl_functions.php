@@ -165,8 +165,15 @@
 
         $ID = $oldid;
 
+        //Hack to keep things valid even if we are empty. 
+        $hack = "<ul>
+</li>
+</ul>
+";
+        if($hack != $R->doc){
+            print $R->doc;
+        }
 
-	    print $R->doc;
         return true;
     }
 
@@ -656,5 +663,17 @@ function tpl_sidebar_hide() {
     }
 }
 
-// vim:ts=4:sw=4:et:enc=utf-8:
+/**
+ * Returns an url for a wiki action. 
+ *
+ */
+function tpl_make_url($type){
+    $data = tpl_get_action($type);
+    extract($data);
+    if(strpos($id, '#') === 0) {
+        return $id;
+    } else {
+        return wl($id, $params);
+    }
+}
 ?>

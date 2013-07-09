@@ -20,5 +20,6 @@ $meta['right_sidebar_content']    = array('multicheckbox', '_choices' => array('
 $meta['search']                   = array('multichoice', '_choices' => array('left', 'right'));
 $meta['closedwiki']               = array('onoff');
 $meta['hideactions']              = array('onoff');
+$meta['showuserbottom']              = array('onoff');
 //Setup vim:ts=2:sw=2:
 ?>

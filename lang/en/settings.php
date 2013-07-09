@@ -21,4 +21,4 @@ $lang['right_sidebar_content_other']    = "Other sidebars (comma separated)";
 $lang['search']                         = "Position of the search field (applies only if 2 sidebars are used)";
 $lang['closedwiki']                     = "Closed Wiki (Navigation shows only the login link if not logged in)"; 
 $lang['hideactions']                    = "Hide all wiki actions to non logged in users";
-// vim:ts=4:sw=4:et:enc=utf-8:
+$lang['showuserbottom']					= "Show a login bottom at the bottom of the page";

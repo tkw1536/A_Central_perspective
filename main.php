@@ -214,8 +214,32 @@ require_once(dirname(__FILE__).'/tpl_functions.php');
     <?php flush()?>
 
 
-    <?php /*old includehook*/ @include(dirname(__FILE__).'/footer.html')?>
+<div align="center" class="footerinc">
+  <?php tpl_license('button', true)?>
 
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="<?php echo DOKU_TPL?>images/button-css.png" width="80" height="15" alt="Valid CSS" border="0" /></a>
+  
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="<?php echo DOKU_TPL?>images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0" /></a>
+  
+  <a target="_blank" href="<?php echo DOKU_BASE?>feed.php" title="Recent changes RSS feed"><img src="<?php echo DOKU_TPL?>images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0" /></a>
+  
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="<?php echo DOKU_TPL?>images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0" /></a>
+  
+  <?php if(tpl_getConf('showuserbottom')){ ?>
+  
+  <?php if(isset($_SERVER['REMOTE_USER'])) { ?>
+  
+  <a href="<?php echo tpl_make_url('login'); ?>" title="Logout"><img src="<?php echo DOKU_TPL?>images/button-logout.png" width="80" height="15" alt="Logout" border="0" /></a>
+  
+  <?php } else { ?>
+  
+  <a href="<?php echo tpl_make_url('login'); ?>" title="Login"><img src="<?php echo DOKU_TPL?>images/button-login.png" width="80" height="15" alt="Login" border="0" /></a>
+  
+  <?php } ?>
+  
+  <?php } ?>
+
+</div>
 
 <div class="no"><?php /* provide DokuWiki housekeeping, required in all templates */ tpl_indexerWebBug()?></div>
 </body>
