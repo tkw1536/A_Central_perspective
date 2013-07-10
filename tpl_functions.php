@@ -149,13 +149,13 @@
 			$format = 'xhtml';
 
 			$R->listcontent_open();
-			$isParent = preg_match('/^(\w*:)*'.$info['page'].'(:\w*)*$/', $INFO['id'])>0;
-			if(($format == 'xhtml') && $isParent )
- 			 $R->doc .= '<span class="current">';
-			$R->internallink(':'.$info['page'],$info['title']);
-			if(($format == 'xhtml') && $isParent)
-  			  $R->doc .= '</span>';
-			$R->listcontent_close();
+            $isParent = preg_match('/^(\w*:)*'.$info['page'].'(:\w*)*$/', $INFO['id'])>0;
+            if(($format == 'xhtml') && $isParent )
+              $R->doc .= '<span class="current">';
+            $R->internallink(':'.$info['page'],$info['title']);
+            if(($format == 'xhtml') && $isParent)
+                $R->doc .= '</span>';
+            $R->listcontent_close();
         }
         while($lvl > 0){
             $R->listitem_close();
