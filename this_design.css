@@ -213,7 +213,8 @@ text-shadow: rgba(255, 255, 255, 0.898438) 0px 1px 1px;
 
 
 
-.menu a.wikilink1:link, .menu a.wikilink1:visited  {
+.menu a.wikilink1:link, .menu a.wikilink1:visited, 
+.menu a.wikilink2:link, .menu a.wikilink2:visited  {
 	display: block;
 	color: #787C80;
 	color: rgba(0,0,0,0.65);
@@ -221,6 +222,11 @@ text-shadow: rgba(255, 255, 255, 0.898438) 0px 1px 1px;
 	text-shadow: white 1px 1px;
 	text-decoration: none!important;
 
+}
+
+.menu a.wikilink2:link, .menu a.wikilink2:visited {
+	color: red;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 

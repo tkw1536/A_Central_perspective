@@ -1,0 +1,7 @@
+base     acentralperspective
+author   Tom Wiesing
+email    tkw01536@gmail.com
+date     2013-07-10
+name     A centered perspective
+desc     A template based on "a_centered_perspective"
+url      https://github.com/tkw1536/A_Central_perspective

@@ -1,1 +1,5 @@
-// This file used to contain code which is no longer needed
+/* DOKUWIKI:include deps/jquery.nicescroll/jquery.nicescroll.min.js */
+
+jQuery(function($){
+	$("html").niceScroll();
+});
