@@ -465,7 +465,7 @@ div.dokuwiki blockquote {
 }
 
 div.dokuwiki pre {
-  font-size: 120%;
+  font-size: 100%;
   padding: 0.5em;
   border: 1px dashed __border__;
   color: __text__;
@@ -521,7 +521,7 @@ div.dokuwiki dl.file dt {
 
 /* inline code words */
 div.dokuwiki code {
-  font-size: 120%;
+  font-size: 100%;
 }
 
 /* inline tables */
