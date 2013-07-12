@@ -129,14 +129,16 @@ require_once(dirname(__FILE__).'/tpl_functions.php');
           <div id="page"><?php ($notoc) ? tpl_content(false) : tpl_content() ?>
 	
 	
-			<div class="meta">
-			  <div class="user">
-			  <?php tpl_userinfo()?>
-			  </div>
-			  <div class="doc">
-			  <?php tpl_pageinfo()?>
-			  </div>
-			</div>
+			<?php if(!tpl_getConf('closedwiki') or (tpl_getConf('closedwiki') and isset($_SERVER['REMOTE_USER']))) { ?>
+  <div class="meta">
+      <div class="user">
+      <?php tpl_userinfo()?>
+      </div>
+      <div class="doc">
+      <?php tpl_pageinfo()?>
+      </div>
+    </div>
+  <?php } ?>
 	
 	</div>
         </div>
@@ -162,14 +164,17 @@ require_once(dirname(__FILE__).'/tpl_functions.php');
         <div id="page" class="page">
           <?php tpl_content() ?> 
 
-		<div class="meta">
-		  <div class="user">
-		  <?php tpl_userinfo()?>
-		  </div>
-		  <div class="doc">
-		  <?php tpl_pageinfo()?>
-		  </div>
-		</div>
+		<?php if(!tpl_getConf('closedwiki') or (tpl_getConf('closedwiki') and isset($_SERVER['REMOTE_USER']))) { ?>
+  <div class="meta">
+      <div class="user">
+      <?php tpl_userinfo()?>
+      </div>
+      <div class="doc">
+      <?php tpl_pageinfo()?>
+      </div>
+    </div>
+  <?php } ?>
+  
         </div> 
       <?php }?>
 
@@ -179,15 +184,17 @@ require_once(dirname(__FILE__).'/tpl_functions.php');
     <?php } elseif(tpl_getConf('sidebar') == 'none') { ?>
       <div id="page" class="page">
         <?php tpl_content() ?>
-
-		<div class="meta">
-		  <div class="user">
-		  <?php tpl_userinfo()?>
-		  </div>
-		  <div class="doc">
-		  <?php tpl_pageinfo()?>
-		  </div>
-		</div>
+  
+  <?php if(!tpl_getConf('closedwiki') or (tpl_getConf('closedwiki') and isset($_SERVER['REMOTE_USER']))) { ?>
+  <div class="meta">
+      <div class="user">
+      <?php tpl_userinfo()?>
+      </div>
+      <div class="doc">
+      <?php tpl_pageinfo()?>
+      </div>
+    </div>
+  <?php } ?>		
       </div>
     <?php } ?>
 
